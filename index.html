@@ -910,12 +910,11 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // TODO: Replace YOUTUBE_VIDEO_ID with your actual YouTube video ID
     const vw = document.getElementById('videoWrapper');
     const vp = document.getElementById('videoPlaceholder');
     if (vw && vp) {
       vw.addEventListener('click', function() {
-        const vid = 'YOUTUBE_VIDEO_ID';
+        const vid = 'jS_kQVK0d8k';
         vp.innerHTML = '';
         const f = document.createElement('iframe');
         f.src = `https://www.youtube.com/embed/${vid}?autoplay=1&rel=0`;
