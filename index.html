@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KubeAstra - AI-Powered Kubernetes Troubleshooting Agent</title>
-  <meta name="description" content="Open-source AI agent that investigates and recovers broken Kubernetes pods. 34 kubectl tools, AI-powered root-cause analysis, automated recovery actions.">
+  <meta name="description" content="Open-source AI agent that investigates and recovers broken Kubernetes pods. 51 tools across cluster inspection, remediation plans, alerts, and RAG. Gemini, Claude, OpenAI, or Ollama.">
   <meta property="og:title" content="KubeAstra - AI-Powered Kubernetes Troubleshooting Agent">
-  <meta property="og:description" content="Open-source AI agent that debugs and recovers Kubernetes pods automatically. 34 kubectl tools + AI root-cause analysis.">
+  <meta property="og:description" content="Open-source AI agent that debugs and recovers Kubernetes pods automatically. 51 tools + Alertmanager auto-investigation + RAG runbook cache + multi-provider LLM.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kubeastra.io">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="KubeAstra - AI-Powered Kubernetes Troubleshooting Agent">
-  <meta name="twitter:description" content="Open-source AI agent that debugs and recovers Kubernetes pods automatically.">
+  <meta name="twitter:description" content="Open-source AI agent that debugs and recovers Kubernetes pods automatically. 51 tools + Alertmanager auto-investigation + RAG runbook cache.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -737,7 +737,7 @@
     </svg>
 
     <h1>Your Kubernetes cluster<br>has an <span class="accent">AI debugger</span> now.</h1>
-    <p class="hero-sub">KubeAstra investigates broken pods, finds the root cause with AI, and recovers your cluster. 34 kubectl tools. One agent. Zero guesswork.</p>
+    <p class="hero-sub">KubeAstra investigates broken pods, finds the root cause with AI, and recovers your cluster. 51 tools. Auto-triage from Alertmanager. Runbook cache with citations. One agent. Zero guesswork.</p>
     <div class="hero-actions">
       <a href="https://github.com/kubeastra/kubeastra" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -784,37 +784,64 @@
   <section class="features-section fade-in" id="features">
     <div class="section-label">Capabilities</div>
     <h2 class="section-title">Everything you need to debug K8s</h2>
-    <p class="section-desc">34 kubectl investigation tools orchestrated by AI. From diagnosis to recovery, in seconds instead of minutes.</p>
+    <p class="section-desc">51 built-in tools orchestrated by AI. From diagnosis to recovery, in seconds instead of minutes.</p>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon fi-1"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
-        <h3>34 Investigation Tools</h3>
-        <p>Pod diagnostics, log analysis, event correlation, node health, resource quotas, network policies, PVC status, and more.</p>
+        <h3>51 Investigation Tools</h3>
+        <p>Pods, deployments, services, events, nodes, Helm releases, resource graphs, and more &mdash; plus GitOps repo search and Prometheus queries.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon fi-2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4c0 2 2 3 2 6h4c0-3 2-4 2-6a4 4 0 0 0-4-4z"/><path d="M10 18h4"/><path d="M10 22h4"/></svg></div>
         <h3>AI Root-Cause Analysis</h3>
-        <p>Cross-references logs, events, and resource metrics to pinpoint exactly what went wrong and why. Powered by Google Gemini.</p>
+        <p>Cross-references logs, events, and resource metrics to pinpoint exactly what went wrong and why. A synthesis critic verifies every claim against the raw evidence.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon fi-3"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div>
         <h3>Automated Recovery</h3>
-        <p>Pod restarts, deployment rollbacks, HPA scaling. Human-in-the-loop approval by default, or fully automated if you choose.</p>
+        <p>Pod restarts, deployment rollbacks, HPA scaling, YAML patches. Human-in-the-loop approval by default, or opt into automated recovery once you trust the plan.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon fi-4"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
         <h3>Web UI Dashboard</h3>
-        <p>Next.js interface that shows investigations in real time. Watch the agent work, review findings, and approve actions.</p>
+        <p>Next.js interface with a live Investigation Trail, cost breakdown, and session sidebar. Watch the agent work, review findings, and approve actions.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon fi-5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
         <h3>MCP Server for IDEs</h3>
-        <p>Model Context Protocol server exposes all 34 tools to AI-powered editors. Debug clusters from Cursor or VS Code.</p>
+        <p>Model Context Protocol server exposes all 51 tools to AI-powered editors. Debug clusters from Cursor or VS Code without leaving the editor.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon fi-6"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3>Fully Self-Hosted</h3>
-        <p>Deploy inside your cluster with Helm. Your data never leaves your infrastructure. No SaaS, no callbacks, no telemetry.</p>
+        <p>Deploy inside your cluster with the bundled Helm chart. Your data never leaves your infrastructure. No SaaS, no callbacks, no telemetry.</p>
+      </div>
+
+      <!-- ── New capabilities (imported from feat/alert-auto-investigation + internal fork) ── -->
+      <div class="feature-card">
+        <div class="feature-icon" style="background: var(--red-bg);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <h3>Alert-Driven Auto-Investigation</h3>
+        <p>Point Alertmanager at KubeAstra&#39;s webhook. Each firing alert triggers a scoped investigation and posts the root cause to Slack &mdash; before you open the laptop.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: var(--accent-bg);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <h3>RAG Runbook Cache</h3>
+        <p>Cached / grounded / cold retrieval router in front of the LLM. Sub-second answers on known failure modes, with citations to the source docs. Backed by Qdrant.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: var(--prom-bg);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>Multi-Step Remediation Plans</h3>
+        <p>Complex fixes get proposed as atomic multi-step plans. Every destructive step exposes its dry-run output before executing, gated by a single-use confirmation token.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: var(--events-bg);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <h3>Tool Result Summarization</h3>
+        <p>10,000-line <code>kubectl logs</code> get compressed to 3-line summaries before entering the LLM context. Heuristic first, LLM polish optional. Raw evidence stays one click away.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: var(--indigo-bg);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
+        <h3>4 LLM Providers</h3>
+        <p>Google Gemini, Anthropic Claude, OpenAI GPT, or Ollama (fully local). Swap providers with a single env var. Any OpenAI-compatible endpoint works &mdash; Azure OpenAI, vLLM, LiteLLM.</p>
       </div>
     </div>
   </section>
